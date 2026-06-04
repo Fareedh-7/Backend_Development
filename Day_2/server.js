@@ -51,6 +51,12 @@ app.get("/students/:id",(req,res)=>{
     res.json(student)
 })
 
+app.get("/students/:id/count",(req,res)=>{
+    res.json({
+      totalStudents : students.length
+    })
+})
+
 app.listen(3000, () => {
   console.log("Server Started");
 });
